@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nrutyashala – The Dance Studio | Bharatanatyam Academy</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Cormorant Garamond & Cinzel for traditional Indian elegance; Plus Jakarta Sans for clean typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for classical icons and glyphs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            maroon: {
+              900: '#2A060E',
+              850: '#380B14',
+              800: '#4A0E1A',
+              700: '#641323',
+              600: '#7E1C2E',
+              500: '#992439',
+            },
+            gold: {
+              100: '#FCF7E6',
+              200: '#F7ECC4',
+              300: '#EDD68C',
+              400: '#DFC05A',
+              500: '#D4AF37',
+              600: '#B89225',
+              700: '#916F17',
+              800: '#6D510C',
+            },
+            ivory: {
+              50: '#FDFBF7',
+              100: '#FAF6ED',
+              200: '#F5EEDB',
+              300: '#EFE5C9',
+            },
+            sand: '#F7F3EB'
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            cormorant: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          boxShadow: {
+            'gold-glow': '0 0 25px rgba(212, 175, 55, 0.25)',
+            'gold-card': '0 10px 30px -10px rgba(74, 14, 26, 0.15), 0 0 0 1px rgba(212, 175, 55, 0.2)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Traditional Kolam / Indian ornamental pattern backgrounds */
+    .bg-rangoli-pattern {
+      background-image: radial-gradient(rgba(212, 175, 55, 0.15) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+    
+    .gold-shimmer {
+      background: linear-gradient(135deg, #DFC05A 0%, #FFF3B0 50%, #B89225 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .border-gradient-gold {
+      border-image: linear-gradient(to right, transparent, #D4AF37, transparent) 1;
+    }
+
+    /* Temple arch archway silhouette */
+    .temple-border-top {
+      background: repeating-linear-gradient(90deg, #D4AF37 0px, #D4AF37 8px, transparent 8px, transparent 16px);
+      height: 2px;
+    }
+
+    /* Smooth backdrop blur styling */
+    .glass-maroon {
+      background: rgba(42, 6, 14, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    
+    .glass-cream {
+      background: rgba(253, 251, 247, 0.95);
+      backdrop-filter: blur(8px);
+    }
+
+    /* Custom subtle scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #2A060E;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #B89225;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D4AF37;
+    }
+  </style>
+</head>
+<body class="font-sans bg-ivory-50 text-gray-800 antialiased selection:bg-gold-500 selection:text-maroon-900">
+
+  <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="glass-maroon border-b border-gold-500/20 px-4 sm:px-8 py-3.5 shadow-xl">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        
+        <!-- Logo Branding -->
+        <a href="#hero" class="group flex items-center space-x-3.5 focus:outline-none">
+          <div class="w-10 h-10 rounded-full border border-gold-400 flex items-center justify-center bg-maroon-800/80 group-hover:border-gold-300 transition-colors shadow-inner">
+            <i class="fa-solid fa-om text-gold-400 text-lg group-hover:scale-110 transition-transform"></i>
+          </div>
+          <div>
+            <span class="block font-cinzel text-xl sm:text-2xl font-bold tracking-[0.2em] text-white group-hover:text-gold-300 transition-colors">
+              NRUTYASHALA
+            </span>
+            <span class="block text-[10px] uppercase tracking-[0.3em] text-gold-400 font-sans font-medium -mt-0.5">
+              The Dance Studio
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium tracking-wide">
+          <a href="#hero" class="text-ivory-100 hover:text-gold-400 transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 hover:after:w-full after:transition-all">Home</a>
+          <a href="#about" class="text-ivory-100 hover:text-gold-400 transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 hover:after:w-full after:transition-all">About</a>
+          <a href="#bharatanatyam" class="text-ivory-100 hover:text-gold-400 transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 hover:after:w-full after:transition-all">Bharatanatyam</a>
+          <a href="#classes" class="text-ivory-100 hover:text-gold-400 transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 hover:after:w-full after:transition-all">Classes</a>
+          <a href="#gallery" class="text-ivory-100 hover:text-gold-400 transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 hover:after:w-full after:transition-all">Gallery</a>
+          <a href="#guru" class="text-ivory-100 hover:text-gold-400 transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 hover:after:w-full after:transition-all">Our Guru</a>
+          <a href="#testimonials" class="text-ivory-100 hover:text-gold-400 transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 hover:after:w-full after:transition-all">Testimonials</a>
+          <a href="#contact" class="text-ivory-100 hover:text-gold-400 transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 hover:after:w-full after:transition-all">Contact</a>
+        </nav>
+
+        <!-- CTA & Mobile Toggle Button -->
+        <div class="flex items-center space-x-3">
+          <a href="#contact" class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-widest bg-gradient-to-r from-gold-500 to-gold-600 text-maroon-900 hover:from-gold-400 hover:to-gold-500 shadow-md hover:shadow-gold-glow transition-all duration-300 transform hover:-translate-y-0.5">
+            <span>Join Now</span>
+            <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+          </a>
+          
+          <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-gold-400 hover:text-white hover:bg-maroon-800 focus:outline-none transition-colors" aria-label="Toggle Navigation Menu">
+            <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden glass-maroon border-b border-gold-500/20 px-6 py-6 transition-all duration-300 animate-fadeIn">
+      <div class="flex flex-col space-y-4 text-center font-cinzel text-base tracking-wider">
+        <a href="#hero" class="mobile-nav-link text-ivory-100 hover:text-gold-400 py-2 border-b border-white/5">Home</a>
+        <a href="#about" class="mobile-nav-link text-ivory-100 hover:text-gold-400 py-2 border-b border-white/5">About</a>
+        <a href="#bharatanatyam" class="mobile-nav-link text-ivory-100 hover:text-gold-400 py-2 border-b border-white/5">Bharatanatyam</a>
+        <a href="#classes" class="mobile-nav-link text-ivory-100 hover:text-gold-400 py-2 border-b border-white/5">Classes & Training</a>
+        <a href="#gallery" class="mobile-nav-link text-ivory-100 hover:text-gold-400 py-2 border-b border-white/5">Gallery</a>
+        <a href="#guru" class="mobile-nav-link text-ivory-100 hover:text-gold-400 py-2 border-b border-white/5">Our Guru</a>
+        <a href="#testimonials" class="mobile-nav-link text-ivory-100 hover:text-gold-400 py-2 border-b border-white/5">Testimonials</a>
+        <a href="#contact" class="mobile-nav-link text-ivory-100 hover:text-gold-400 py-2">Contact</a>
+        <a href="#contact" class="mobile-nav-link mt-2 inline-block px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-widest bg-gradient-to-r from-gold-500 to-gold-600 text-maroon-900 shadow-md">
+          Join Nrutyashala Today
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-maroon-900 pt-20">
+    <!-- Atmospheric Background Image with Gradient Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=1920&auto=format&fit=crop" 
+        alt="Classical Indian Bharatanatyam Dancer" 
+        class="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 ease-out brightness-[0.42] contrast-110"
+        onerror="this.src='https://placehold.co/1920x1080/2A060E/D4AF37?text=Nrutyashala+Dance+Studio'"
+      />
+      <!-- Traditional Indian Warm Radial Gradient Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-t from-maroon-900 via-maroon-900/60 to-maroon-950/80"></div>
+      <div class="absolute inset-0 bg-rangoli-pattern opacity-25 mix-blend-overlay"></div>
+    </div>
+
+    <!-- Subtle Golden Aura Elements -->
+    <div class="absolute w-96 h-96 rounded-full bg-gold-500/10 filter blur-3xl pointer-events-none -top-20 -left-20"></div>
+    <div class="absolute w-96 h-96 rounded-full bg-red-700/20 filter blur-3xl pointer-events-none -bottom-20 -right-20"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-6 py-20 text-center flex flex-col items-center">
+      
+      <!-- Top Decorative Indian Ornament -->
+      <div class="inline-flex items-center space-x-3 mb-6 opacity-90 animate-pulse">
+        <span class="w-12 h-[1px] bg-gradient-to-r from-transparent to-gold-400"></span>
+        <i class="fa-solid fa-feather-pointed text-gold-400 text-xs"></i>
+        <span class="text-xs uppercase tracking-[0.35em] text-gold-300 font-cinzel">Tradition • Expression • Grace</span>
+        <i class="fa-solid fa-feather-pointed text-gold-400 text-xs transform -scale-x-100"></i>
+        <span class="w-12 h-[1px] bg-gradient-to-l from-transparent to-gold-400"></span>
+      </div>
+
+      <!-- Main Title -->
+      <h1 class="font-cinzel text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-[0.18em] leading-none mb-3 drop-shadow-2xl">
+        NRUTYASHALA
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="font-cormorant italic text-2xl sm:text-3xl md:text-4xl text-gold-300 tracking-wide font-medium mb-6">
+        The Dance Studio
+      </p>
+
+      <!-- Classical Motif Divider -->
+      <div class="flex items-center justify-center space-x-4 mb-8">
+        <div class="w-16 sm:w-28 h-[1px] bg-gradient-to-r from-transparent via-gold-400 to-gold-500"></div>
+        <div class="w-2.5 h-2.5 rotate-45 border border-gold-400 bg-maroon-700"></div>
+        <div class="w-16 sm:w-28 h-[1px] bg-gradient-to-l from-transparent via-gold-400 to-gold-500"></div>
+      </div>
+
+      <!-- Supporting Text -->
+      <p class="max-w-2xl text-base sm:text-xl text-ivory-100/90 font-light leading-relaxed mb-10 tracking-wide">
+        Where tradition meets expression, rhythm becomes art, and every movement tells a story.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full sm:w-auto">
+        <a href="#about" class="w-full sm:w-auto px-8 py-4 rounded-full font-cinzel text-xs tracking-[0.2em] uppercase font-bold text-white border border-gold-400/80 bg-maroon-800/40 hover:bg-gold-500 hover:text-maroon-900 transition-all duration-300 shadow-lg hover:shadow-gold-glow flex items-center justify-center group">
+          <span>Explore Nrutyashala</span>
+          <i class="fa-solid fa-compass ml-3 group-hover:rotate-45 transition-transform duration-300 text-gold-300 group-hover:text-maroon-900"></i>
+        </a>
+        <a href="#classes" class="w-full sm:w-auto px-8 py-4 rounded-full font-cinzel text-xs tracking-[0.2em] uppercase font-bold text-maroon-900 bg-gradient-to-r from-gold-400 via-gold-300 to-gold-500 hover:from-gold-300 hover:to-gold-400 transition-all duration-300 shadow-xl hover:shadow-gold-glow flex items-center justify-center transform hover:-translate-y-0.5">
+          <span>Join Our Classes</span>
+          <i class="fa-solid fa-arrow-right ml-3"></i>
+        </a>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="mt-16 sm:mt-20">
+        <a href="#about" class="flex flex-col items-center text-gold-300/70 hover:text-gold-300 transition-colors group" aria-label="Scroll Down">
+          <span class="text-[10px] uppercase font-cinzel tracking-widest mb-2 opacity-80">Discover More</span>
+          <div class="w-6 h-10 border-2 border-gold-400/40 rounded-full flex justify-center pt-2 group-hover:border-gold-300">
+            <div class="w-1.5 h-2 bg-gold-400 rounded-full animate-bounce"></div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about" class="py-24 relative bg-sand overflow-hidden">
+    <!-- Subtle temple arch motif at section top -->
+    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold-500 to-transparent opacity-40"></div>
+    <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-gold-300/10 filter blur-2xl"></div>
+
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-cinzel uppercase tracking-[0.3em] text-maroon-700 font-semibold block mb-2">Heritage & Pedagogy</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-cinzel font-bold text-maroon-900 mb-4 tracking-wide">
+          About Nrutyashala
+        </h2>
+        <div class="flex items-center justify-center space-x-3">
+          <span class="w-12 h-[1px] bg-gold-500"></span>
+          <i class="fa-solid fa-dharmachakra text-gold-600 text-sm"></i>
+          <span class="w-12 h-[1px] bg-gold-500"></span>
+        </div>
+      </div>
+
+      <!-- Two-Column Editorial Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Column: Visual with Classical Frame -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Decorative Gold Frame Offsets -->
+            <div class="absolute -top-4 -left-4 w-full h-full border-2 border-gold-500/50 rounded-2xl transform -rotate-1 pointer-events-none"></div>
+            <div class="absolute -bottom-4 -right-4 w-full h-full bg-maroon-900/10 rounded-2xl transform rotate-1 pointer-events-none"></div>
+            
+            <!-- Main Image -->
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+              <img 
+                src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=900&auto=format&fit=crop" 
+                alt="Bharatanatyam Dancer Mudra Expression" 
+                class="w-full h-[480px] object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
+                onerror="this.src='https://placehold.co/900x1200/4A0E1A/FFF?text=Bharatanatyam+Pose'"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-maroon-950/70 via-transparent to-transparent"></div>
+              
+              <!-- Floating Badge -->
+              <div class="absolute bottom-5 left-5 right-5 bg-maroon-900/90 backdrop-blur-md p-4 rounded-xl border border-gold-400/40 text-ivory-100 flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-full bg-gold-500/20 border border-gold-400 flex items-center justify-center shrink-0">
+                  <i class="fa-solid fa-bell text-gold-400 text-lg"></i>
+                </div>
+                <div>
+                  <h4 class="font-cinzel text-xs tracking-wider uppercase text-gold-300 font-bold">Sacred Tradition</h4>
+                  <p class="text-xs text-ivory-200">Preserving the timeless Natyashastra lineage</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Academy Story & Values -->
+        <div class="lg:col-span-7 space-y-6 text-gray-700">
+          <p class="font-cormorant text-2xl sm:text-3xl text-maroon-800 leading-snug font-medium italic">
+            “Nrutyashala is a sanctuary of art, devotion, and rhythmic mastery—dedicated to keeping the pure spirit of Bharatanatyam vibrantly alive.”
+          </p>
+
+          <p class="text-base sm:text-lg leading-relaxed text-gray-700 font-normal">
+            Rooted in centuries-old traditions of South Indian classical heritage, <strong>Nrutyashala – The Dance Studio</strong> offers a disciplined yet deeply joyful environment for students of all ages. We believe dance is not merely physical performance, but a spiritual and emotional communion between rhythm, body, and consciousness.
+          </p>
+
+          <p class="text-base sm:text-lg leading-relaxed text-gray-700 font-normal">
+            Our academy guides students from their very first steps (Adavus) to the pinnacle of solo stage debut (Arangetram). We impart complete knowledge of Natyashastra, including intricate hand gestures (Mudras), refined facial expressions (Abhinaya), complex rhythmic cycles (Tala), and classical Sanskrit dance theory.
+          </p>
+
+          <!-- Core Pillars Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
+            <div class="p-4 rounded-xl bg-white/80 border border-gold-400/30 text-center shadow-sm hover:shadow-md transition-shadow">
+              <i class="fa-solid fa-hands text-gold-600 text-xl mb-2 block"></i>
+              <span class="text-xs font-cinzel font-bold text-maroon-900 block">Hastamudras</span>
+              <span class="text-[11px] text-gray-600">Pure Symbolism</span>
+            </div>
+            <div class="p-4 rounded-xl bg-white/80 border border-gold-400/30 text-center shadow-sm hover:shadow-md transition-shadow">
+              <i class="fa-solid fa-masks-theater text-gold-600 text-xl mb-2 block"></i>
+              <span class="text-xs font-cinzel font-bold text-maroon-900 block">Abhinaya</span>
+              <span class="text-[11px] text-gray-600">Soulful Expression</span>
+            </div>
+            <div class="p-4 rounded-xl bg-white/80 border border-gold-400/30 text-center shadow-sm hover:shadow-md transition-shadow">
+              <i class="fa-solid fa-drum text-gold-600 text-xl mb-2 block"></i>
+              <span class="text-xs font-cinzel font-bold text-maroon-900 block">Tala & Laya</span>
+              <span class="text-[11px] text-gray-600">Complex Footwork</span>
+            </div>
+            <div class="p-4 rounded-xl bg-white/80 border border-gold-400/30 text-center shadow-sm hover:shadow-md transition-shadow">
+              <i class="fa-solid fa-trophy text-gold-600 text-xl mb-2 block"></i>
+              <span class="text-xs font-cinzel font-bold text-maroon-900 block">Arangetram</span>
+              <span class="text-[11px] text-gray-600">Stage Excellence</span>
+            </div>
+          </div>
+
+          <!-- Decorative Button Link -->
+          <div class="pt-2">
+            <a href="#bharatanatyam" class="inline-flex items-center text-maroon-800 font-cinzel text-xs uppercase tracking-widest font-bold hover:text-gold-600 transition-colors group">
+              <span>Read About the Ancient Artform</span>
+              <i class="fa-solid fa-arrow-right-long ml-3 transform group-hover:translate-x-2 transition-transform"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <div class="w-full py-6 bg-sand flex items-center justify-center overflow-hidden">
+    <div class="flex items-center space-x-6 opacity-40">
+      <div class="h-[1px] w-24 sm:w-48 bg-gradient-to-r from-transparent to-maroon-900"></div>
+      <i class="fa-solid fa-om text-maroon-800 text-lg"></i>
+      <i class="fa-solid fa-sun text-gold-600 text-sm"></i>
+      <i class="fa-solid fa-om text-maroon-800 text-lg"></i>
+      <div class="h-[1px] w-24 sm:w-48 bg-gradient-to-l from-transparent to-maroon-900"></div>
+    </div>
+  </div>
+
+  <section class="py-24 bg-maroon-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-rangoli-pattern opacity-10"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-cinzel uppercase tracking-[0.3em] text-gold-400 font-semibold block mb-2">Our Signature Approach</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-cinzel font-bold text-white mb-4 tracking-wide">
+          Why Choose Nrutyashala
+        </h2>
+        <p class="text-ivory-100/80 font-light text-base sm:text-lg">
+          We combine the sacred discipline of ancient Gurukul traditions with empowering modern learning methods.
+        </p>
+        <div class="flex items-center justify-center space-x-3 mt-4">
+          <span class="w-12 h-[1px] bg-gold-400"></span>
+          <div class="w-2 h-2 rotate-45 bg-gold-400"></div>
+          <span class="w-12 h-[1px] bg-gold-400"></span>
+        </div>
+      </div>
+
+      <!-- 6 Feature Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Card 1 -->
+        <div class="p-8 rounded-2xl bg-maroon-850/80 border border-gold-500/20 hover:border-gold-400 transition-all duration-300 hover:-translate-y-1.5 shadow-lg group">
+          <div class="w-14 h-14 rounded-2xl bg-maroon-800 border border-gold-400/40 flex items-center justify-center text-gold-400 text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-maroon-900 transition-colors shadow-inner">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h3 class="font-cinzel text-xl font-bold text-gold-300 mb-3 tracking-wide group-hover:text-white transition-colors">
+            Traditional Training
+          </h3>
+          <p class="text-ivory-100/80 text-sm leading-relaxed">
+            Learn Bharatanatyam through authentic classical techniques adhering strictly to the Kalakshetra and Pandanallur styles.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="p-8 rounded-2xl bg-maroon-850/80 border border-gold-500/20 hover:border-gold-400 transition-all duration-300 hover:-translate-y-1.5 shadow-lg group">
+          <div class="w-14 h-14 rounded-2xl bg-maroon-800 border border-gold-400/40 flex items-center justify-center text-gold-400 text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-maroon-900 transition-colors shadow-inner">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3 class="font-cinzel text-xl font-bold text-gold-300 mb-3 tracking-wide group-hover:text-white transition-colors">
+            Experienced Guidance
+          </h3>
+          <p class="text-ivory-100/80 text-sm leading-relaxed">
+            Learn under dedicated and knowledgeable dance instructors with decades of pedagogical mastery and performance acclaim.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-8 rounded-2xl bg-maroon-850/80 border border-gold-500/20 hover:border-gold-400 transition-all duration-300 hover:-translate-y-1.5 shadow-lg group">
+          <div class="w-14 h-14 rounded-2xl bg-maroon-800 border border-gold-400/40 flex items-center justify-center text-gold-400 text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-maroon-900 transition-colors shadow-inner">
+            <i class="fa-solid fa-masks-theater"></i>
+          </div>
+          <h3 class="font-cinzel text-xl font-bold text-gold-300 mb-3 tracking-wide group-hover:text-white transition-colors">
+            Expression & Abhinaya
+          </h3>
+          <p class="text-ivory-100/80 text-sm leading-relaxed">
+            Develop rich storytelling, the Navarasas (nine emotions), eye work (Drishti Bhedas), and graceful expressive communication.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="p-8 rounded-2xl bg-maroon-850/80 border border-gold-500/20 hover:border-gold-400 transition-all duration-300 hover:-translate-y-1.5 shadow-lg group">
+          <div class="w-14 h-14 rounded-2xl bg-maroon-800 border border-gold-400/40 flex items-center justify-center text-gold-400 text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-maroon-900 transition-colors shadow-inner">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <h3 class="font-cinzel text-xl font-bold text-gold-300 mb-3 tracking-wide group-hover:text-white transition-colors">
+            Rhythm & Tala
+          </h3>
+          <p class="text-ivory-100/80 text-sm leading-relaxed">
+            Build a deep command of rhythm, precise footwork (Adavu), Solkattu recitation, and intricate Carnatic musicality.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="p-8 rounded-2xl bg-maroon-850/80 border border-gold-500/20 hover:border-gold-400 transition-all duration-300 hover:-translate-y-1.5 shadow-lg group">
+          <div class="w-14 h-14 rounded-2xl bg-maroon-800 border border-gold-400/40 flex items-center justify-center text-gold-400 text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-maroon-900 transition-colors shadow-inner">
+            <i class="fa-solid fa-landmark-dome"></i>
+          </div>
+          <h3 class="font-cinzel text-xl font-bold text-gold-300 mb-3 tracking-wide group-hover:text-white transition-colors">
+            Cultural Connection
+          </h3>
+          <p class="text-ivory-100/80 text-sm leading-relaxed">
+            Experience the rich heritage, temple iconography, mythological legends, and timeless cultural philosophies of India.
+          </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="p-8 rounded-2xl bg-maroon-850/80 border border-gold-500/20 hover:border-gold-400 transition-all duration-300 hover:-translate-y-1.5 shadow-lg group">
+          <div class="w-14 h-14 rounded-2xl bg-maroon-800 border border-gold-400/40 flex items-center justify-center text-gold-400 text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-maroon-900 transition-colors shadow-inner">
+            <i class="fa-solid fa-sparkles"></i>
+          </div>
+          <h3 class="font-cinzel text-xl font-bold text-gold-300 mb-3 tracking-wide group-hover:text-white transition-colors">
+            Performance Opportunities
+          </h3>
+          <p class="text-ivory-100/80 text-sm leading-relaxed">
+            Showcase your hard-earned artistry on prestigious stages, annual showcases, temple festivals, and dance ballets.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="bharatanatyam" class="py-24 bg-ivory-50 relative">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-cinzel uppercase tracking-[0.3em] text-maroon-700 font-semibold block mb-2">Sacred Art of South India</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-cinzel font-bold text-maroon-900 mb-6 tracking-wide">
+          The Grace of Bharatanatyam
+        </h2>
+        <p class="text-gray-700 font-normal text-base sm:text-lg leading-relaxed">
+          Bharatanatyam is one of India's oldest and most revered classical dance forms. Originating in the temples of Tamil Nadu, this sacred art synthesizes rhythm (<em class="text-maroon-800 font-semibold">Bhava</em>), emotion (<em class="text-maroon-800 font-semibold">Raga</em>), and rhythm (<em class="text-maroon-800 font-semibold">Tala</em>)—culminating in an extraordinary visual hymn of poise, dramatic power, and architectural beauty.
+        </p>
+      </div>
+
+      <!-- The 3 Pillars of Bharatanatyam: Nritta, Nritya, Natya -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        
+        <!-- Nritta -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-gold-card border border-gold-300/40 hover:border-gold-500 transition-all duration-300 group flex flex-col">
+          <div class="h-64 overflow-hidden relative">
+            <img 
+              src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=800&auto=format&fit=crop" 
+              alt="Nritta - Pure Bharatanatyam Movement" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              onerror="this.src='https://placehold.co/800x600/4A0E1A/D4AF37?text=Nritta'"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-maroon-900/80 via-maroon-900/20 to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-gold-500 text-maroon-950 font-cinzel text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Pure Dance
+            </div>
+            <div class="absolute bottom-4 left-6">
+              <span class="text-xs uppercase font-sans tracking-widest text-gold-300">Dimension One</span>
+              <h3 class="font-cinzel text-2xl font-bold text-white">Nritta</h3>
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-cormorant italic text-lg text-maroon-800 font-semibold mb-2">
+                Pure dance and rhythmic movement
+              </h4>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Nritta represents abstract dance composed of rhythmic foot patterns, hand gestures (mudras), and sculptural bodily postures without specific narrative meaning. It highlights technical precision, speed, and geometric symmetry.
+              </p>
+            </div>
+            <ul class="text-xs text-gray-500 space-y-1.5 border-t border-gray-100 pt-4">
+              <li><i class="fa-solid fa-check text-gold-600 mr-2"></i>Adavus & Jathis synchronization</li>
+              <li><i class="fa-solid fa-check text-gold-600 mr-2"></i>Araimandi (half-sitting posture)</li>
+              <li><i class="fa-solid fa-check text-gold-600 mr-2"></i>Chari & Mandala foot dynamics</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Nritya -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-gold-card border border-gold-300/40 hover:border-gold-500 transition-all duration-300 group flex flex-col">
+          <div class="h-64 overflow-hidden relative">
+            <img 
+              src="https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=800&auto=format&fit=crop" 
+              alt="Nritya - Expressive Abhinaya" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              onerror="this.src='https://placehold.co/800x600/4A0E1A/D4AF37?text=Nritya'"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-maroon-900/80 via-maroon-900/20 to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-gold-500 text-maroon-950 font-cinzel text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Expression
+            </div>
+            <div class="absolute bottom-4 left-6">
+              <span class="text-xs uppercase font-sans tracking-widest text-gold-300">Dimension Two</span>
+              <h3 class="font-cinzel text-2xl font-bold text-white">Nritya</h3>
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-cormorant italic text-lg text-maroon-800 font-semibold mb-2">
+                Expression and storytelling through movement
+              </h4>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Nritya weaves rhythm together with emotional expression (Bhava) and narrative depiction (Abhinaya). The dancer uses facial mime, eyes, and mudras to convey poetry, devotional verses, and spiritual love.
+              </p>
+            </div>
+            <ul class="text-xs text-gray-500 space-y-1.5 border-t border-gray-100 pt-4">
+              <li><i class="fa-solid fa-check text-gold-600 mr-2"></i>Navarasa (nine fundamental emotions)</li>
+              <li><i class="fa-solid fa-check text-gold-600 mr-2"></i>Vachika & Angika Abhinaya</li>
+              <li><i class="fa-solid fa-check text-gold-600 mr-2"></i>Padams, Javalis & Varnams</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Natya -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-gold-card border border-gold-300/40 hover:border-gold-500 transition-all duration-300 group flex flex-col">
+          <div class="h-64 overflow-hidden relative">
+            <img 
+              src="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?q=80&w=800&auto=format&fit=crop" 
+              alt="Natya - Dramatic Indian Performance" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              onerror="this.src='https://placehold.co/800x600/4A0E1A/D4AF37?text=Natya'"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-maroon-900/80 via-maroon-900/20 to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-gold-500 text-maroon-950 font-cinzel text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Drama
+            </div>
+            <div class="absolute bottom-4 left-6">
+              <span class="text-xs uppercase font-sans tracking-widest text-gold-300">Dimension Three</span>
+              <h3 class="font-cinzel text-2xl font-bold text-white">Natya</h3>
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-cormorant italic text-lg text-maroon-800 font-semibold mb-2">
+                Dramatic representation and storytelling
+              </h4>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Natya is the theatrical element encompassing character portrayals, dramatic dialogues, and grand mythological productions where dancers embody deities, mythological heroes, and sacred tales.
+              </p>
+            </div>
+            <ul class="text-xs text-gray-500 space-y-1.5 border-t border-gray-100 pt-4">
+              <li><i class="fa-solid fa-check text-gold-600 mr-2"></i>Full dance dramas & ballets</li>
+              <li><i class="fa-solid fa-check text-gold-600 mr-2"></i>Epics: Ramayana, Mahabharata & Bhagavatam</li>
+              <li><i class="fa-solid fa-check text-gold-600 mr-2"></i>Traditional Aharya (costume & decorum)</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="bg-gradient-to-r from-maroon-900 to-maroon-950 rounded-2xl p-8 sm:p-12 text-white shadow-2xl border border-gold-500/30">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div class="max-w-2xl">
+            <span class="text-xs font-cinzel uppercase tracking-[0.25em] text-gold-400 font-bold block mb-2">The Language of Hands</span>
+            <h3 class="text-2xl sm:text-3xl font-cinzel font-bold text-white mb-3">
+              Hastamudras: 28 Single-Hand Gestures
+            </h3>
+            <p class="text-ivory-100/80 text-sm sm:text-base leading-relaxed">
+              In Bharatanatyam, the hands speak when words fall silent. From the sacred <em>Pataka</em> flag to the open lotus of <em>Alapadma</em>, every mudra carries centuries of spiritual connotation and narrative precision.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <div class="text-center px-4 py-3 rounded-xl bg-maroon-800/80 border border-gold-400/30 min-w-[110px]">
+              <span class="block font-cinzel text-gold-300 font-bold text-sm">Pataka</span>
+              <span class="text-[11px] text-ivory-200">The Flag</span>
+            </div>
+            <div class="text-center px-4 py-3 rounded-xl bg-maroon-800/80 border border-gold-400/30 min-w-[110px]">
+              <span class="block font-cinzel text-gold-300 font-bold text-sm">Tripataka</span>
+              <span class="text-[11px] text-ivory-200">Crown / Tree</span>
+            </div>
+            <div class="text-center px-4 py-3 rounded-xl bg-maroon-800/80 border border-gold-400/30 min-w-[110px]">
+              <span class="block font-cinzel text-gold-300 font-bold text-sm">Alapadma</span>
+              <span class="text-[11px] text-ivory-200">Full Lotus</span>
+            </div>
+            <div class="text-center px-4 py-3 rounded-xl bg-maroon-800/80 border border-gold-400/30 min-w-[110px]">
+              <span class="block font-cinzel text-gold-300 font-bold text-sm">Mayura</span>
+              <span class="text-[11px] text-ivory-200">The Peacock</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="classes" class="py-24 bg-sand relative">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-cinzel uppercase tracking-[0.3em] text-maroon-700 font-semibold block mb-2">Structured Curriculum</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-cinzel font-bold text-maroon-900 mb-4 tracking-wide">
+          Learn. Practice. Perform.
+        </h2>
+        <p class="text-gray-700 font-normal text-base sm:text-lg">
+          Whether you are taking your first steps or preparing for your solo graduation stage debut, our programs foster technical precision and creative joy.
+        </p>
+        <div class="flex items-center justify-center space-x-3 mt-4">
+          <span class="w-12 h-[1px] bg-gold-600"></span>
+          <i class="fa-solid fa-ankh text-gold-600 text-xs"></i>
+          <span class="w-12 h-[1px] bg-gold-600"></span>
+        </div>
+      </div>
+
+      <!-- Classes Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Class 1: Beginner -->
+        <div class="bg-white rounded-2xl p-8 border border-gold-400/30 shadow-gold-card hover:border-gold-500 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full text-[11px] font-cinzel font-bold uppercase tracking-wider bg-gold-100 text-maroon-900 border border-gold-400">
+                Beginner Level
+              </span>
+              <span class="text-xs text-gray-600"><i class="fa-regular fa-clock mr-1 text-gold-600"></i>[Schedule Upon Enquiry]</span>
+            </div>
+            <h3 class="font-cinzel text-xl font-bold text-maroon-900 mb-2 group-hover:text-maroon-700 transition-colors">
+              Beginner Bharatanatyam
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+              Foundational introduction to posture (Araimandi, Muzhumandi), fundamental foot tapping (Tatta Adavu), eye coordination, and classical discipline. Perfect for newcomers of all ages.
+            </p>
+            <div class="space-y-2 mb-8 text-xs text-gray-600 border-t border-gray-100 pt-4">
+              <div class="flex items-center"><i class="fa-solid fa-circle-check text-gold-600 mr-2 text-[10px]"></i>Basic Adavus (Steps 1 to 20)</div>
+              <div class="flex items-center"><i class="fa-solid fa-circle-check text-gold-600 mr-2 text-[10px]"></i>Asamyukta Hastas (Single-hand Mudras)</div>
+              <div class="flex items-center"><i class="fa-solid fa-circle-check text-gold-600 mr-2 text-[10px]"></i>Adi Tala basics & rhythmic counting</div>
+            </div>
+          </div>
+          <button onclick="prefillContactForm('Bharatanatyam Beginner Classes', 'Beginner')" class="w-full py-3 rounded-full font-cinzel text-xs font-bold tracking-widest uppercase text-maroon-900 bg-gold-400/20 hover:bg-gold-500 hover:text-maroon-950 border border-gold-500/60 transition-all duration-300">
+            Enquire Now
+          </button>
+        </div>
+
+        <!-- Class 2: Intermediate -->
+        <div class="bg-white rounded-2xl p-8 border border-gold-400/30 shadow-gold-card hover:border-gold-500 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full text-[11px] font-cinzel font-bold uppercase tracking-wider bg-gold-100 text-maroon-900 border border-gold-400">
+                Intermediate Level
+              </span>
+              <span class="text-xs text-gray-600"><i class="fa-regular fa-clock mr-1 text-gold-600"></i>[Schedule Upon Enquiry]</span>
+            </div>
+            <h3 class="font-cinzel text-xl font-bold text-maroon-900 mb-2 group-hover:text-maroon-700 transition-colors">
+              Intermediate Bharatanatyam
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+              Intermediate speed training, complex Jathis, Korvais, and learning standard repertoire items such as Alarippu, Jatiswaram, and Shabdam with emotional depth.
+            </p>
+            <div class="space-y-2 mb-8 text-xs text-gray-600 border-t border-gray-100 pt-4">
+              <div class="flex items-center"><i class="fa-solid fa-circle-check text-gold-600 mr-2 text-[10px]"></i>Multi-speed footwork execution</div>
+              <div class="flex items-center"><i class="fa-solid fa-circle-check text-gold-600 mr-2 text-[10px]"></i>Introduction to Alarippu & Jatiswaram</div>
+              <div class="flex items-center"><i class="fa-solid fa-circle-check text-gold-600 mr-2 text-[10px]"></i>Tala recitation with Nattuvangam sense</div>
+            </div>
+          </div>
+          <button onclick="prefillContactForm('Intermediate Classes', 'Intermediate')" class="w-full py-3 rounded-full font-cinzel text-xs font-bold tracking-widest uppercase text-maroon-900 bg-gold-400/20 hover:bg-gold-500 hover:text-maroon-950 border border-gold-500/60 transition-all duration-300">
+            Enquire Now
+          </button>
+        </div>
+
+        <!-- Class 3: Advanced -->
+        <div class="bg-white rounded-2xl p-8 border border-gold-400/30 shadow-gold-card hover:border-gold-500 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full text-[11px] font-cinzel font-bold uppercase tracking-wider bg-gold-500 text-maroon-950 border border-gold-600 font-semibold">
+                Advanced Level
+              </span>
+              <span class="text-xs text-gray-600"><i class="fa-regular fa-clock mr-1 text-gold-600"></i>[Schedule Upon Enquiry]</span>
+            </div>
+            <h3 class="font-cinzel text-xl font-bold text-maroon-900 mb-2 group-hover:text-maroon-700 transition-colors">
+              Advanced Bharatanatyam
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+              Mastering the centerpieces of the classical Margam: the intricate Varnam, lyrical Padams, and fast-paced Tillanas with artistic authority and stamina.
+            </p>
+            <div class="space-y-2 mb-8 text-xs text-gray-600 border-t border-gray-100 pt-4">
+              <div class="flex items-center"><i class="fa-solid fa-circle-check text-gold-600 mr-2 text-[10px]"></i>Complete Varnam compositions</div>
+              <div class="flex items-center"><i class="fa-solid fa-circle-check text-gold-600 mr-2 text-[10px]"></i>Nuanced Sanchari Bhava improvisation</div>
+              <div class="flex items-center"><i class="fa-solid fa-circle-check text-gold-600 mr-2 text-[10px]"></i>Live orchestra synchronization</div>
+            </div>
+          </div>
+          <button onclick="prefillContactForm('Advanced Classes', 'Advanced')" class="w-full py-3 rounded-full font-cinzel text-xs font-bold tracking-widest uppercase text-maroon-900 bg-gold-400/20 hover:bg-gold-500 hover:text-maroon-950 border border-gold-500/60 transition-all duration-300">
+            Enquire Now
+          </button>
+        </div>
+
+        <!-- Class 4: Abhinaya & Expression -->
+        <div class="bg-white rounded-2xl p-8 border border-gold-400/30 shadow-gold-card hover:border-gold-500 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full text-[11px] font-cinzel font-bold uppercase tracking-wider bg-gold-100 text-maroon-900 border border-gold-400">
+                All Levels
+              </span>
+              <span class="text-xs text-gray-600"><i class="fa-regular fa-clock mr-1 text-gold-600"></i>[Schedule Upon Enquiry]</span>
+            </div>
+            <h3 class="font-cinzel text-xl font-bold text-maroon-900 mb-2 group-hover:text-maroon-700 transition-colors">
+              Abhinaya & Expression
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+              Dedicated masterclasses focusing on subtle facial expressions, micro-movements of eyes, eyebrows, and breathing to evoke pure Navarasas and poignant storytelling.
+            </p>
+            <div class="space-y-2 mb-8 text-xs text-gray-600 border-t border-gray-100 pt-4">
+              <div class="flex items-center"><i class="fa-solid fa-circle-check text-gold-600 mr-2 text-[10px]"></i>Drishti, Greeva & Shiro Bhedas</div>
+              <div class="flex items-center"><i class="fa-solid fa-circle-check text-gold-600 mr-2 text-[10px]"></i>Subtle emotive portrayal of Nayika / Nayaka</div>
+              <div class="flex items-center"><i class="fa-solid fa-circle-check text-gold-600 mr-2 text-[10px]"></i>Interpretation of poetic Sahitya</div>
+            </div>
+          </div>
+          <button onclick="prefillContactForm('Private Training', 'Intermediate')" class="w-full py-3 rounded-full font-cinzel text-xs font-bold tracking-widest uppercase text-maroon-900 bg-gold-400/20 hover:bg-gold-500 hover:text-maroon-950 border border-gold-500/60 transition-all duration-300">
+            Enquire Now
+          </button>
+        </div>
+
+        <!-- Class 5: Mudra & Rhythm Training -->
+        <div class="bg-white rounded-2xl p-8 border border-gold-400/30 shadow-gold-card hover:border-gold-500 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full text-[11px] font-cinzel font-bold uppercase tracking-wider bg-gold-100 text-maroon-900 border border-gold-400">
+                Specialized Workshop
+              </span>
+              <span class="text-xs text-gray-600"><i class="fa-regular fa-clock mr-1 text-gold-600"></i>[Schedule Upon Enquiry]</span>
+            </div>
+            <h3 class="font-cinzel text-xl font-bold text-maroon-900 mb-2 group-hover:text-maroon-700 transition-colors">
+              Mudra & Rhythm Bootcamp
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+              Deep-dive immersion into Hastamudra vocabulary, Viniyogas (uses), and rhythmic metronome training in Suladi Sapta Talas and complex Nadai variations.
+            </p>
+            <div class="space-y-2 mb-8 text-xs text-gray-600 border-t border-gray-100 pt-4">
+              <div class="flex items-center"><i class="fa-solid fa-circle-check text-gold-600 mr-2 text-[10px]"></i>All 28 Asamyukta & 24 Samyukta Hastas</div>
+              <div class="flex items-center"><i class="fa-solid fa-circle-check text-gold-600 mr-2 text-[10px]"></i>Jaathi & Gati changes (Tisra, Chatusra, etc.)</div>
+              <div class="flex items-center"><i class="fa-solid fa-circle-check text-gold-600 mr-2 text-[10px]"></i>Nattuvangam cymbals awareness</div>
+            </div>
+          </div>
+          <button onclick="prefillContactForm('Bharatanatyam Beginner Classes', 'Not Sure')" class="w-full py-3 rounded-full font-cinzel text-xs font-bold tracking-widest uppercase text-maroon-900 bg-gold-400/20 hover:bg-gold-500 hover:text-maroon-950 border border-gold-500/60 transition-all duration-300">
+            Enquire Now
+          </button>
+        </div>
+
+        <!-- Class 6: Performance & Arangetram Prep -->
+        <div class="bg-white rounded-2xl p-8 border border-gold-400/30 shadow-gold-card hover:border-gold-500 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full text-[11px] font-cinzel font-bold uppercase tracking-wider bg-maroon-900 text-gold-300 border border-gold-500">
+                Graduation & Stage
+              </span>
+              <span class="text-xs text-gray-600"><i class="fa-regular fa-clock mr-1 text-gold-600"></i>[Schedule Upon Enquiry]</span>
+            </div>
+            <h3 class="font-cinzel text-xl font-bold text-maroon-900 mb-2 group-hover:text-maroon-700 transition-colors">
+              Performance Preparation
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+              Rigorous, personalized mentorship program specifically tailored for solo stage debuts (Arangetram), national youth festivals, and touring ensemble productions.
+            </p>
+            <div class="space-y-2 mb-8 text-xs text-gray-600 border-t border-gray-100 pt-4">
+              <div class="flex items-center"><i class="fa-solid fa-circle-check text-gold-600 mr-2 text-[10px]"></i>Full 2.5-hour Margam preparation</div>
+              <div class="flex items-center"><i class="fa-solid fa-circle-check text-gold-600 mr-2 text-[10px]"></i>Stage presence, lighting & Aharya aesthetics</div>
+              <div class="flex items-center"><i class="fa-solid fa-circle-check text-gold-600 mr-2 text-[10px]"></i>Individual artistic coaching</div>
+            </div>
+          </div>
+          <button onclick="prefillContactForm('Performance / Events', 'Advanced')" class="w-full py-3 rounded-full font-cinzel text-xs font-bold tracking-widest uppercase text-maroon-900 bg-gold-400/20 hover:bg-gold-500 hover:text-maroon-950 border border-gold-500/60 transition-all duration-300">
+            Enquire Now
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="gallery" class="py-24 bg-maroon-950 text-white relative">
+    <div class="absolute inset-0 bg-rangoli-pattern opacity-10"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-cinzel uppercase tracking-[0.3em] text-gold-400 font-semibold block mb-2">Visual Splendor</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-cinzel font-bold text-white mb-4 tracking-wide">
+          Moments at Nrutyashala
+        </h2>
+        <p class="text-ivory-100/80 font-light text-base sm:text-lg">
+          Snapshots of devotion, bells ringing in unison, and timeless classical expressions captured on stage and in our studio.
+        </p>
+        <div class="flex items-center justify-center space-x-3 mt-4">
+          <span class="w-12 h-[1px] bg-gold-500"></span>
+          <i class="fa-solid fa-camera-retro text-gold-400 text-xs"></i>
+          <span class="w-12 h-[1px] bg-gold-500"></span>
+        </div>
+      </div>
+
+      <!-- Masonry Gallery Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        
+        <!-- Image 1 (Stage Performance) -->
+        <div class="gallery-item relative overflow-hidden rounded-2xl group cursor-pointer h-72 sm:h-80 border border-gold-500/20"
+             onclick="openLightbox('https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=1200&auto=format&fit=crop', 'Varnam Solo Recital', 'Stage Performance in Traditional Kanchipuram Silk & Temple Jewelry')">
+          <img 
+            src="https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=800&auto=format&fit=crop" 
+            alt="Bharatanatyam Stage Performance" 
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            onerror="this.src='https://placehold.co/800x1000/380B14/D4AF37?text=Stage+Performance'"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-maroon-950 via-maroon-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-xs uppercase tracking-widest text-gold-400 font-cinzel">Stage Performance</span>
+            <h4 class="text-lg font-cinzel font-bold text-white">Varnam Solo Recital</h4>
+            <p class="text-xs text-ivory-200 mt-1"><i class="fa-solid fa-magnifying-glass-plus mr-1 text-gold-300"></i> Click to enlarge</p>
+          </div>
+        </div>
+
+        <!-- Image 2 (Ghungroo Close-up) -->
+        <div class="gallery-item relative overflow-hidden rounded-2xl group cursor-pointer h-72 sm:h-80 border border-gold-500/20"
+             onclick="openLightbox('https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=1200&auto=format&fit=crop', 'Ghungroo & Sacred Bells', 'Traditional brass ankle bells worn to mark the rhythmic tala footsteps')">
+          <img 
+            src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=800&auto=format&fit=crop" 
+            alt="Ghungroo and Ankle Bells" 
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            onerror="this.src='https://placehold.co/800x1000/380B14/D4AF37?text=Ghungroo'"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-maroon-950 via-maroon-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-xs uppercase tracking-widest text-gold-400 font-cinzel">Sacred Bells</span>
+            <h4 class="text-lg font-cinzel font-bold text-white">Ghungroo & Tala Footwork</h4>
+            <p class="text-xs text-ivory-200 mt-1"><i class="fa-solid fa-magnifying-glass-plus mr-1 text-gold-300"></i> Click to enlarge</p>
+          </div>
+        </div>
+
+        <!-- Image 3 (Mudras & Gestures) -->
+        <div class="gallery-item relative overflow-hidden rounded-2xl group cursor-pointer h-72 sm:h-80 border border-gold-500/20"
+             onclick="openLightbox('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1200&auto=format&fit=crop', 'Hastamudras in Harmony', 'Intricate mudra configurations signifying cosmic elements')">
+          <img 
+            src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=800&auto=format&fit=crop" 
+            alt="Bharatanatyam Mudra Hand Gestures" 
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            onerror="this.src='https://placehold.co/800x1000/380B14/D4AF37?text=Mudra+Study'"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-maroon-950 via-maroon-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-xs uppercase tracking-widest text-gold-400 font-cinzel">Hand Gestures</span>
+            <h4 class="text-lg font-cinzel font-bold text-white">Hastamudras in Harmony</h4>
+            <p class="text-xs text-ivory-200 mt-1"><i class="fa-solid fa-magnifying-glass-plus mr-1 text-gold-300"></i> Click to enlarge</p>
+          </div>
+        </div>
+
+        <!-- Image 4 (Temple Architecture & Devotion) -->
+        <div class="gallery-item relative overflow-hidden rounded-2xl group cursor-pointer h-72 sm:h-80 border border-gold-500/20"
+             onclick="openLightbox('https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1200&auto=format&fit=crop', 'Temple Sanctum Atmosphere', 'Architectural heritage inspiring classical Bharatanatyam Karanas')">
+          <img 
+            src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=800&auto=format&fit=crop" 
+            alt="Temple Art and Architecture" 
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            onerror="this.src='https://placehold.co/800x1000/380B14/D4AF37?text=Temple+Art'"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-maroon-950 via-maroon-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-xs uppercase tracking-widest text-gold-400 font-cinzel">Cultural Roots</span>
+            <h4 class="text-lg font-cinzel font-bold text-white">Temple Sanctum Karanas</h4>
+            <p class="text-xs text-ivory-200 mt-1"><i class="fa-solid fa-magnifying-glass-plus mr-1 text-gold-300"></i> Click to enlarge</p>
+          </div>
+        </div>
+
+        <!-- Image 5 (Traditional Costume) -->
+        <div class="gallery-item relative overflow-hidden rounded-2xl group cursor-pointer h-72 sm:h-80 border border-gold-500/20"
+             onclick="openLightbox('https://images.unsplash.com/photo-1518834107812-67b0b7c58434?q=80&w=1200&auto=format&fit=crop', 'Aharya Abhinaya', 'Pleated silk costumes, temple jewellery, and fragrant jasmine flowers')">
+          <img 
+            src="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?q=80&w=800&auto=format&fit=crop" 
+            alt="Traditional Dance Costume" 
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            onerror="this.src='https://placehold.co/800x1000/380B14/D4AF37?text=Traditional+Costume'"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-maroon-950 via-maroon-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-xs uppercase tracking-widest text-gold-400 font-cinzel">Costume & Makeup</span>
+            <h4 class="text-lg font-cinzel font-bold text-white">Aharya & Temple Adornment</h4>
+            <p class="text-xs text-ivory-200 mt-1"><i class="fa-solid fa-magnifying-glass-plus mr-1 text-gold-300"></i> Click to enlarge</p>
+          </div>
+        </div>
+
+        <!-- Image 6 (Studio Practice) -->
+        <div class="gallery-item relative overflow-hidden rounded-2xl group cursor-pointer h-72 sm:h-80 border border-gold-500/20"
+             onclick="openLightbox('https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1200&auto=format&fit=crop', 'Riyaz & Adavu Practice', 'Dedicated practice sessions honing alignment and stamina')">
+          <img 
+            src="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=800&auto=format&fit=crop" 
+            alt="Daily Dance Riyaz" 
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            onerror="this.src='https://placehold.co/800x1000/380B14/D4AF37?text=Studio+Practice'"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-maroon-950 via-maroon-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-xs uppercase tracking-widest text-gold-400 font-cinzel">Studio Practice</span>
+            <h4 class="text-lg font-cinzel font-bold text-white">Daily Riyaz & Adavu Alignment</h4>
+            <p class="text-xs text-ivory-200 mt-1"><i class="fa-solid fa-magnifying-glass-plus mr-1 text-gold-300"></i> Click to enlarge</p>
+          </div>
+        </div>
+
+        <!-- Image 7 (Annual Showcase Ensemble) -->
+        <div class="gallery-item relative overflow-hidden rounded-2xl group cursor-pointer h-72 sm:h-80 border border-gold-500/20"
+             onclick="openLightbox('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1200&auto=format&fit=crop', 'Annual Showcase & Natyanjali', 'Nrutyashala students performing group choreographies on stage')">
+          <img 
+            src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=800&auto=format&fit=crop" 
+            alt="Annual Dance Showcase" 
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            onerror="this.src='https://placehold.co/800x1000/380B14/D4AF37?text=Showcase'"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-maroon-950 via-maroon-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-xs uppercase tracking-widest text-gold-400 font-cinzel">Festival Ensemble</span>
+            <h4 class="text-lg font-cinzel font-bold text-white">Natyanjali Annual Showcase</h4>
+            <p class="text-xs text-ivory-200 mt-1"><i class="fa-solid fa-magnifying-glass-plus mr-1 text-gold-300"></i> Click to enlarge</p>
+          </div>
+        </div>
+
+        <!-- Image 8 (Cultural Devotion & Brass Lamps) -->
+        <div class="gallery-item relative overflow-hidden rounded-2xl group cursor-pointer h-72 sm:h-80 border border-gold-500/20"
+             onclick="openLightbox('https://images.unsplash.com/photo-1609137144813-7d9921338f24?q=80&w=1200&auto=format&fit=crop', 'Auspicious Beginnings', 'Lighting the traditional brass Kuthuvilakku before dance practice')">
+          <img 
+            src="https://images.unsplash.com/photo-1609137144813-7d9921338f24?q=80&w=800&auto=format&fit=crop" 
+            alt="Lighting Kuthuvilakku Lamp" 
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            onerror="this.src='https://placehold.co/800x1000/380B14/D4AF37?text=Auspicious+Lamp'"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-maroon-950 via-maroon-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-xs uppercase tracking-widest text-gold-400 font-cinzel">Tradition</span>
+            <h4 class="text-lg font-cinzel font-bold text-white">Lighting the Kuthuvilakku</h4>
+            <p class="text-xs text-ivory-200 mt-1"><i class="fa-solid fa-magnifying-glass-plus mr-1 text-gold-300"></i> Click to enlarge</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="relative max-w-4xl w-full bg-maroon-950 border border-gold-400/40 rounded-2xl overflow-hidden shadow-2xl flex flex-col">
+      <!-- Close button -->
+      <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-maroon-800/80 border border-gold-400 text-gold-300 hover:text-white flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+      
+      <!-- Modal Image -->
+      <div class="w-full max-h-[70vh] bg-black flex items-center justify-center overflow-hidden">
+        <img id="lightbox-img" src="" alt="Enlarged dance view" class="w-full h-full object-contain max-h-[70vh]">
+      </div>
+      
+      <!-- Modal Caption Info -->
+      <div class="p-6 bg-maroon-900 border-t border-gold-500/20">
+        <h4 id="lightbox-title" class="font-cinzel text-xl font-bold text-gold-300"></h4>
+        <p id="lightbox-desc" class="text-sm text-ivory-100/90 mt-1"></p>
+      </div>
+    </div>
+  </div>
+
+  <section id="guru" class="py-24 bg-ivory-100 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 sm:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-cinzel uppercase tracking-[0.3em] text-maroon-700 font-semibold block mb-2">Lineage & Mentorship</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-cinzel font-bold text-maroon-900 mb-4 tracking-wide">
+          Meet Our Guru
+        </h2>
+        <div class="flex items-center justify-center space-x-3">
+          <span class="w-12 h-[1px] bg-gold-600"></span>
+          <i class="fa-solid fa-om text-gold-600 text-sm"></i>
+          <span class="w-12 h-[1px] bg-gold-600"></span>
+        </div>
+      </div>
+
+      <!-- Guru Profile Card -->
+      <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-gold-card border border-gold-400/40 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Guru Portrait Area -->
+          <div class="lg:col-span-5 flex flex-col items-center">
+            <div class="relative w-64 h-80 sm:w-72 sm:h-96 rounded-2xl overflow-hidden border-4 border-gold-400/80 shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" 
+                alt="Guru of Nrutyashala Dance Academy" 
+                class="w-full h-full object-cover object-top"
+                onerror="this.src='https://placehold.co/600x800/4A0E1A/D4AF37?text=Guru+Portrait'"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-maroon-950/60 via-transparent to-transparent"></div>
+            </div>
+            
+            <div class="mt-4 text-center">
+              <span class="text-xs uppercase font-cinzel tracking-widest text-gold-700 font-bold block">Founder & Artistic Director</span>
+              <span class="text-sm font-semibold text-gray-500">[Guru / Instructor Title]</span>
+            </div>
+          </div>
+
+          <!-- Guru Bio & Credentials -->
+          <div class="lg:col-span-7 space-y-6">
+            <div>
+              <h3 class="text-3xl sm:text-4xl font-cinzel font-bold text-maroon-900 mb-1">
+                [Guru / Instructor Name]
+              </h3>
+              <p class="font-cormorant italic text-xl text-gold-700 font-semibold">
+                Disciple of Renowned Classical Bharatanatyam Maestros
+              </p>
+            </div>
+
+            <p class="text-gray-700 leading-relaxed text-base">
+              With over [Number] years of rigorous training in the venerable [Tradition / Gharana, e.g., Kalakshetra / Pandanallur] style, [Guru / Instructor Name] has dedicated their life to the practice, preservation, and transmission of Bharatanatyam. Their dance journeys have graced prestigious festivals across India and internationally.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed text-base">
+              At Nrutyashala, their teaching philosophy focuses on shaping holistic dancers: nurturing not just flawless geometric lines and rigorous footwork, but profound emotional expression (Bhava), cultural empathy, humility, and stage poise.
+            </p>
+
+            <!-- Milestones & Highlights -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-b border-gray-100 py-6">
+              <div>
+                <span class="block font-cinzel text-2xl font-bold text-maroon-800">[20+]</span>
+                <span class="text-xs text-gray-500 uppercase tracking-wider">Years of Teaching</span>
+              </div>
+              <div>
+                <span class="block font-cinzel text-2xl font-bold text-maroon-800">[50+]</span>
+                <span class="text-xs text-gray-500 uppercase tracking-wider">Arangetrams Mentored</span>
+              </div>
+              <div>
+                <span class="block font-cinzel text-2xl font-bold text-maroon-800">[National]</span>
+                <span class="text-xs text-gray-500 uppercase tracking-wider">Acclaimed Performer</span>
+              </div>
+            </div>
+
+            <!-- Guru Quote -->
+            <blockquote class="font-cormorant italic text-lg text-maroon-800 border-l-2 border-gold-500 pl-4 py-1">
+              “Dance is the silent dialogue between the human soul and the divine cosmic rhythm. When we dance with sincerity, every footstep sanctifies the ground.”
+            </blockquote>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="testimonials" class="py-24 bg-sand relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-cinzel uppercase tracking-[0.3em] text-maroon-700 font-semibold block mb-2">Reflections & Experiences</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-cinzel font-bold text-maroon-900 mb-4 tracking-wide">
+          What Our Students Say
+        </h2>
+        <p class="text-gray-700 font-normal text-base sm:text-lg">
+          Heartfelt journeys of transformation, grace, and confidence from the Nrutyashala family.
+        </p>
+        <div class="flex items-center justify-center space-x-3 mt-4">
+          <span class="w-12 h-[1px] bg-gold-600"></span>
+          <i class="fa-solid fa-quote-left text-gold-600 text-xs"></i>
+          <span class="w-12 h-[1px] bg-gold-600"></span>
+        </div>
+      </div>
+
+      <!-- Testimonial Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Testimonial 1 -->
+        <div class="bg-white rounded-2xl p-8 border border-gold-400/30 shadow-gold-card flex flex-col justify-between relative">
+          <i class="fa-solid fa-quote-right absolute top-6 right-6 text-gold-200 text-3xl pointer-events-none"></i>
+          <div>
+            <div class="flex text-gold-500 mb-4 space-x-1 text-xs">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="font-cormorant italic text-lg sm:text-xl text-gray-800 leading-snug mb-6">
+              “Nrutyashala has helped me discover confidence, discipline and the beauty of Bharatanatyam. The instructors don't just teach steps—they teach the soul behind every movement.”
+            </p>
+          </div>
+          <div class="flex items-center space-x-4 border-t border-gray-100 pt-4">
+            <div class="w-12 h-12 rounded-full bg-maroon-800 text-gold-300 font-cinzel font-bold flex items-center justify-center text-sm border border-gold-400">
+              [SP]
+            </div>
+            <div>
+              <h4 class="font-cinzel text-sm font-bold text-maroon-900">[Student Name / Parent]</h4>
+              <p class="text-xs text-gray-500">Advanced Student • 4 Years at Studio</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white rounded-2xl p-8 border border-gold-400/30 shadow-gold-card flex flex-col justify-between relative">
+          <i class="fa-solid fa-quote-right absolute top-6 right-6 text-gold-200 text-3xl pointer-events-none"></i>
+          <div>
+            <div class="flex text-gold-500 mb-4 space-x-1 text-xs">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="font-cormorant italic text-lg sm:text-xl text-gray-800 leading-snug mb-6">
+              “Every class is a beautiful journey into Indian culture and artistic expression. The Guru's patience with both children and adult beginners is truly remarkable.”
+            </p>
+          </div>
+          <div class="flex items-center space-x-4 border-t border-gray-100 pt-4">
+            <div class="w-12 h-12 rounded-full bg-maroon-800 text-gold-300 font-cinzel font-bold flex items-center justify-center text-sm border border-gold-400">
+              [AM]
+            </div>
+            <div>
+              <h4 class="font-cinzel text-sm font-bold text-maroon-900">[Student Name / Parent]</h4>
+              <p class="text-xs text-gray-500">Intermediate Dancer & Parent</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white rounded-2xl p-8 border border-gold-400/30 shadow-gold-card flex flex-col justify-between relative">
+          <i class="fa-solid fa-quote-right absolute top-6 right-6 text-gold-200 text-3xl pointer-events-none"></i>
+          <div>
+            <div class="flex text-gold-500 mb-4 space-x-1 text-xs">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="font-cormorant italic text-lg sm:text-xl text-gray-800 leading-snug mb-6">
+              “Preparing for my Arangetram here was one of the most rewarding milestones of my life. Nrutyashala is more than a dance studio; it is my artistic home.”
+            </p>
+          </div>
+          <div class="flex items-center space-x-4 border-t border-gray-100 pt-4">
+            <div class="w-12 h-12 rounded-full bg-maroon-800 text-gold-300 font-cinzel font-bold flex items-center justify-center text-sm border border-gold-400">
+              [VR]
+            </div>
+            <div>
+              <h4 class="font-cinzel text-sm font-bold text-maroon-900">[Arangetram Graduate]</h4>
+              <p class="text-xs text-gray-500">Alumna & Performer</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Note for Studio Owner -->
+      <div class="mt-8 text-center text-xs text-gray-500 italic">
+        * Student names and reviews can be seamlessly replaced with verified Google or Studio testimonials.
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 bg-maroon-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-rangoli-pattern opacity-10"></div>
+    <div class="absolute -top-32 -left-32 w-80 h-80 rounded-full bg-gold-500/10 filter blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-cinzel uppercase tracking-[0.3em] text-gold-400 font-semibold block mb-2">Connect With Us</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-cinzel font-bold text-white mb-4 tracking-wide">
+          Begin Your Dance Journey
+        </h2>
+        <p class="text-ivory-100/90 font-light text-base sm:text-lg">
+          Have questions about classes, timings, or enrollment? We would love to hear from you.
+        </p>
+        <div class="flex items-center justify-center space-x-3 mt-4">
+          <span class="w-12 h-[1px] bg-gold-400"></span>
+          <i class="fa-solid fa-envelope-open-text text-gold-400 text-xs"></i>
+          <span class="w-12 h-[1px] bg-gold-400"></span>
+        </div>
+      </div>
+
+      <!-- Two-Column Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        
+        <!-- Left Side: Contact Information Cards -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="bg-maroon-850/80 p-8 rounded-2xl border border-gold-500/20 shadow-xl space-y-6">
+            <div>
+              <h3 class="font-cinzel text-2xl font-bold text-gold-300">Nrutyashala</h3>
+              <span class="text-xs uppercase tracking-[0.25em] text-ivory-200">The Dance Studio</span>
+              <p class="text-sm text-ivory-100/80 mt-2">
+                Preserving the sacred traditions of Bharatanatyam with excellence and devotion.
+              </p>
+            </div>
+
+            <div class="space-y-4 pt-2 text-sm text-ivory-100/90">
+              
+              <!-- Address -->
+              <div class="flex items-start space-x-4 group">
+                <div class="w-10 h-10 rounded-xl bg-maroon-800 border border-gold-400/40 flex items-center justify-center text-gold-400 shrink-0 group-hover:bg-gold-500 group-hover:text-maroon-900 transition-colors">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <span class="block text-xs uppercase tracking-wider text-gold-400 font-cinzel font-bold">Studio Address</span>
+                  <span>[Studio Address, City, State, PIN]</span>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="flex items-start space-x-4 group">
+                <div class="w-10 h-10 rounded-xl bg-maroon-800 border border-gold-400/40 flex items-center justify-center text-gold-400 shrink-0 group-hover:bg-gold-500 group-hover:text-maroon-900 transition-colors">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <span class="block text-xs uppercase tracking-wider text-gold-400 font-cinzel font-bold">Phone Number</span>
+                  <span>[Phone Number / WhatsApp Helpline]</span>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="flex items-start space-x-4 group">
+                <div class="w-10 h-10 rounded-xl bg-maroon-800 border border-gold-400/40 flex items-center justify-center text-gold-400 shrink-0 group-hover:bg-gold-500 group-hover:text-maroon-900 transition-colors">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <span class="block text-xs uppercase tracking-wider text-gold-400 font-cinzel font-bold">Email Address</span>
+                  <span>[contact@nrutyashala.com]</span>
+                </div>
+              </div>
+
+              <!-- Instagram -->
+              <div class="flex items-start space-x-4 group">
+                <div class="w-10 h-10 rounded-xl bg-maroon-800 border border-gold-400/40 flex items-center justify-center text-gold-400 shrink-0 group-hover:bg-gold-500 group-hover:text-maroon-900 transition-colors">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div>
+                  <span class="block text-xs uppercase tracking-wider text-gold-400 font-cinzel font-bold">Instagram</span>
+                  <span>[@nrutyashala_dance]</span>
+                </div>
+              </div>
+
+              <!-- Working Hours -->
+              <div class="flex items-start space-x-4 group">
+                <div class="w-10 h-10 rounded-xl bg-maroon-800 border border-gold-400/40 flex items-center justify-center text-gold-400 shrink-0 group-hover:bg-gold-500 group-hover:text-maroon-900 transition-colors">
+                  <i class="fa-solid fa-clock"></i>
+                </div>
+                <div>
+                  <span class="block text-xs uppercase tracking-wider text-gold-400 font-cinzel font-bold">Studio Hours</span>
+                  <span>[Mon – Sat: 4:00 PM – 8:30 PM | Sun: 9:00 AM – 1:00 PM]</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Studio Visit Note -->
+          <div class="p-6 rounded-2xl bg-gold-500/10 border border-gold-400/30 flex items-center space-x-4">
+            <i class="fa-solid fa-bell-concierge text-gold-400 text-2xl shrink-0"></i>
+            <p class="text-xs text-ivory-200 leading-relaxed">
+              Studio visits are welcomed during active rehearsal hours by prior appointment. Please submit the form to schedule a trial session.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Side: Modern Responsive Contact Form -->
+        <div class="lg:col-span-7">
+          <div class="bg-maroon-850/90 p-8 sm:p-10 rounded-3xl border border-gold-500/30 shadow-2xl relative">
+            
+            <!-- Success Message Notification (hidden initially) -->
+            <div id="form-success-banner" class="hidden mb-6 p-6 rounded-2xl bg-emerald-950/80 border border-emerald-400/60 text-emerald-100 animate-fadeIn">
+              <div class="flex items-start space-x-3">
+                <i class="fa-solid fa-circle-check text-emerald-400 text-2xl mt-0.5"></i>
+                <div>
+                  <h4 class="font-cinzel font-bold text-emerald-300 text-base">Thank you for reaching out to Nrutyashala!</h4>
+                  <p class="text-xs text-emerald-200/90 mt-1">We will get back to you soon with class schedules and admission details.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- The Form -->
+            <form id="contact-form" onsubmit="handleFormSubmit(event)" novalidate class="space-y-6">
+              
+              <!-- Full Name (Required) -->
+              <div>
+                <label for="fullName" class="block text-xs uppercase font-cinzel tracking-wider text-gold-300 mb-2 font-semibold">
+                  Full Name <span class="text-red-400">*</span>
+                </label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gold-400/70">
+                    <i class="fa-regular fa-user text-sm"></i>
+                  </div>
+                  <input 
+                    type="text" 
+                    id="fullName" 
+                    name="fullName" 
+                    required 
+                    placeholder="e.g. Priyadarshini Sundaram" 
+                    class="w-full pl-10 pr-4 py-3 rounded-xl bg-maroon-950/70 border border-gold-500/30 text-white placeholder-gray-400 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all text-sm"
+                  />
+                </div>
+                <p id="err-fullName" class="text-red-400 text-xs mt-1 hidden">Please provide your full name.</p>
+              </div>
+
+              <!-- Email & Phone in 2 Columns -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Email (Required) -->
+                <div>
+                  <label for="email" class="block text-xs uppercase font-cinzel tracking-wider text-gold-300 mb-2 font-semibold">
+                    Email Address <span class="text-red-400">*</span>
+                  </label>
+                  <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gold-400/70">
+                      <i class="fa-regular fa-envelope text-sm"></i>
+                    </div>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      required 
+                      placeholder="e.g. dancer@example.com" 
+                      class="w-full pl-10 pr-4 py-3 rounded-xl bg-maroon-950/70 border border-gold-500/30 text-white placeholder-gray-400 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all text-sm"
+                    />
+                  </div>
+                  <p id="err-email" class="text-red-400 text-xs mt-1 hidden">Please enter a valid email address.</p>
+                </div>
+
+                <!-- Phone (Optional) -->
+                <div>
+                  <label for="phone" class="block text-xs uppercase font-cinzel tracking-wider text-gold-300 mb-2 font-semibold">
+                    Phone Number <span class="text-gray-400 font-normal lowercase">(optional)</span>
+                  </label>
+                  <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gold-400/70">
+                      <i class="fa-solid fa-phone text-sm"></i>
+                    </div>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      name="phone" 
+                      placeholder="e.g. +91 98765 43210" 
+                      class="w-full pl-10 pr-4 py-3 rounded-xl bg-maroon-950/70 border border-gold-500/30 text-white placeholder-gray-400 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all text-sm"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interest and Level Dropdowns -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Interest -->
+                <div>
+                  <label for="interest" class="block text-xs uppercase font-cinzel tracking-wider text-gold-300 mb-2 font-semibold">
+                    Select Your Interest
+                  </label>
+                  <div class="relative">
+                    <select 
+                      id="interest" 
+                      name="interest" 
+                      class="w-full px-4 py-3 rounded-xl bg-maroon-950 border border-gold-500/30 text-white focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all text-sm appearance-none cursor-pointer">
+                      <option value="Bharatanatyam Beginner Classes">Bharatanatyam Beginner Classes</option>
+                      <option value="Intermediate Classes">Intermediate Classes</option>
+                      <option value="Advanced Classes">Advanced Classes</option>
+                      <option value="Private Training">Private Training</option>
+                      <option value="Performance / Events">Performance / Events</option>
+                      <option value="General Enquiry">General Enquiry</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gold-400">
+                      <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Preferred Level -->
+                <div>
+                  <label for="level" class="block text-xs uppercase font-cinzel tracking-wider text-gold-300 mb-2 font-semibold">
+                    Preferred Class Level
+                  </label>
+                  <div class="relative">
+                    <select 
+                      id="level" 
+                      name="level" 
+                      class="w-full px-4 py-3 rounded-xl bg-maroon-950 border border-gold-500/30 text-white focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all text-sm appearance-none cursor-pointer">
+                      <option value="Beginner">Beginner</option>
+                      <option value="Intermediate">Intermediate</option>
+                      <option value="Advanced">Advanced</option>
+                      <option value="Not Sure">Not Sure</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gold-400">
+                      <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label for="message" class="block text-xs uppercase font-cinzel tracking-wider text-gold-300 mb-2 font-semibold">
+                  Your Message or Enquiry
+                </label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="4" 
+                  placeholder="Tell us about previous dance experience (if any), preferred timings, or specific questions..." 
+                  class="w-full px-4 py-3 rounded-xl bg-maroon-950/70 border border-gold-500/30 text-white placeholder-gray-400 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all text-sm resize-none"></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button 
+                type="submit" 
+                id="submit-btn"
+                class="w-full py-4 rounded-xl font-cinzel text-xs font-bold uppercase tracking-[0.25em] text-maroon-950 bg-gradient-to-r from-gold-400 via-gold-300 to-gold-500 hover:from-gold-300 hover:to-gold-400 shadow-xl hover:shadow-gold-glow transition-all duration-300 flex items-center justify-center space-x-3 transform hover:-translate-y-0.5">
+                <span>Send Enquiry</span>
+                <i class="fa-solid fa-paper-plane text-xs"></i>
+              </button>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="relative py-28 overflow-hidden bg-maroon-950 text-center text-white">
+    <!-- Background Dancer Imagery with Dramatic Dark Vignette -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=1920&auto=format&fit=crop" 
+        alt="Classical Indian Bharatanatyam Stage Dancer" 
+        class="w-full h-full object-cover object-center filter brightness-[0.25] contrast-125"
+        onerror="this.src='https://placehold.co/1920x800/1E0A0E/D4AF37?text=Nrutyashala+Call+To+Action'"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-maroon-950 via-maroon-900/80 to-maroon-950"></div>
+      <div class="absolute inset-0 bg-rangoli-pattern opacity-15"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6">
+      <div class="inline-flex items-center space-x-3 mb-4">
+        <span class="w-8 h-[1px] bg-gold-400"></span>
+        <i class="fa-solid fa-gem text-gold-400 text-xs"></i>
+        <span class="w-8 h-[1px] bg-gold-400"></span>
+      </div>
+
+      <h2 class="text-3xl sm:text-5xl md:text-6xl font-cinzel font-bold text-white mb-6 tracking-wider leading-tight">
+        Step Into the World of Bharatanatyam
+      </h2>
+
+      <p class="max-w-2xl mx-auto text-base sm:text-xl text-ivory-100/90 font-light leading-relaxed mb-10">
+        Discover rhythm, expression, tradition and the joy of dance with Nrutyashala.
+      </p>
+
+      <a href="#contact" class="inline-flex items-center px-10 py-4 rounded-full font-cinzel text-xs font-bold uppercase tracking-[0.25em] text-maroon-950 bg-gradient-to-r from-gold-400 via-gold-300 to-gold-500 hover:from-gold-300 hover:to-gold-400 shadow-2xl hover:shadow-gold-glow transition-all duration-300 transform hover:-translate-y-1">
+        <span>Join Nrutyashala</span>
+        <i class="fa-solid fa-arrow-right ml-3 text-xs"></i>
+      </a>
+    </div>
+  </section>
+
+  <footer class="bg-maroon-950 text-ivory-100 border-t border-gold-500/20 pt-16 pb-12 relative">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-gold-500/10">
+        
+        <!-- Brand Description -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-9 h-9 rounded-full border border-gold-400 flex items-center justify-center bg-maroon-900 text-gold-400">
+              <i class="fa-solid fa-om text-sm"></i>
+            </div>
+            <div>
+              <span class="block font-cinzel text-xl font-bold tracking-[0.2em] text-white">NRUTYASHALA</span>
+              <span class="block text-[9px] uppercase tracking-[0.28em] text-gold-400 font-sans font-medium -mt-1">The Dance Studio</span>
+            </div>
+          </div>
+          <p class="text-sm text-ivory-100/80 leading-relaxed max-w-sm">
+            Preserving tradition. Inspiring expression. Celebrating Bharatanatyam. A dedicated academy for classical Indian dance pedagogy, spiritual storytelling, and artistic mastery.
+          </p>
+        </div>
+
+        <!-- Quick Navigation Links -->
+        <div class="lg:col-span-4">
+          <h4 class="font-cinzel text-xs uppercase tracking-[0.25em] text-gold-400 font-bold mb-4">Quick Links</h4>
+          <div class="grid grid-cols-2 gap-2 text-sm text-ivory-100/80">
+            <a href="#hero" class="hover:text-gold-300 transition-colors">Home</a>
+            <a href="#about" class="hover:text-gold-300 transition-colors">About</a>
+            <a href="#bharatanatyam" class="hover:text-gold-300 transition-colors">Bharatanatyam</a>
+            <a href="#classes" class="hover:text-gold-300 transition-colors">Classes</a>
+            <a href="#gallery" class="hover:text-gold-300 transition-colors">Gallery</a>
+            <a href="#guru" class="hover:text-gold-300 transition-colors">Our Guru</a>
+            <a href="#testimonials" class="hover:text-gold-300 transition-colors">Testimonials</a>
+            <a href="#contact" class="hover:text-gold-300 transition-colors">Contact</a>
+          </div>
+        </div>
+
+        <!-- Social Media Icons & Newsletter Info -->
+        <div class="lg:col-span-3 space-y-4">
+          <h4 class="font-cinzel text-xs uppercase tracking-[0.25em] text-gold-400 font-bold mb-4">Follow Our Art</h4>
+          <div class="flex items-center space-x-3">
+            <a href="#contact" class="w-10 h-10 rounded-full bg-maroon-900 border border-gold-400/40 text-gold-400 hover:text-white hover:bg-gold-600 transition-colors flex items-center justify-center" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#contact" class="w-10 h-10 rounded-full bg-maroon-900 border border-gold-400/40 text-gold-400 hover:text-white hover:bg-gold-600 transition-colors flex items-center justify-center" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#contact" class="w-10 h-10 rounded-full bg-maroon-900 border border-gold-400/40 text-gold-400 hover:text-white hover:bg-gold-600 transition-colors flex items-center justify-center" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="#contact" class="w-10 h-10 rounded-full bg-maroon-900 border border-gold-400/40 text-gold-400 hover:text-white hover:bg-gold-600 transition-colors flex items-center justify-center" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+          <p class="text-xs text-ivory-200/70 pt-2">
+            Join our performances and seasonal Natyanjali dance showcases.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-ivory-200/60">
+        <p>© 2026 Nrutyashala – The Dance Studio. All Rights Reserved.</p>
+        <p class="mt-2 sm:mt-0 font-cinzel text-gold-400/80">Bharatanatyam • Tradition • Expression</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Drawer Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isExpanded = mobileMenu.classList.contains('hidden');
+      if (isExpanded) {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark');
+      } else {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      }
+    });
+
+    // Close mobile menu on navigation click
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      });
+    });
+
+    // Header Background Scroll Transition
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        header.classList.add('shadow-2xl');
+      } else {
+        header.classList.remove('shadow-2xl');
+      }
+    });
+
+    // Lightbox Modal Functions
+    function openLightbox(imgSrc, title, desc) {
+      const modal = document.getElementById('lightbox-modal');
+      const img = document.getElementById('lightbox-img');
+      const titleElem = document.getElementById('lightbox-title');
+      const descElem = document.getElementById('lightbox-desc');
+
+      img.src = imgSrc;
+      titleElem.textContent = title;
+      descElem.textContent = desc;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close lightbox on Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Close lightbox when clicking outside modal contents
+    document.getElementById('lightbox-modal').addEventListener('click', (e) => {
+      if (e.target.id === 'lightbox-modal') closeLightbox();
+    });
+
+    // Quick prefill from Class Cards to Contact Form
+    function prefillContactForm(interestValue, levelValue) {
+      const interestSelect = document.getElementById('interest');
+      const levelSelect = document.getElementById('level');
+      
+      if (interestSelect) interestSelect.value = interestValue;
+      if (levelSelect) levelSelect.value = levelValue;
+
+      // Smooth scroll to form
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+
+      const fullName = document.getElementById('fullName');
+      const email = document.getElementById('email');
+      const errName = document.getElementById('err-fullName');
+      const errEmail = document.getElementById('err-email');
+      const successBanner = document.getElementById('form-success-banner');
+      const submitBtn = document.getElementById('submit-btn');
+
+      let isValid = true;
+
+      // Validate Name
+      if (!fullName.value.trim()) {
+        errName.classList.remove('hidden');
+        fullName.classList.add('border-red-400');
+        isValid = false;
+      } else {
+        errName.classList.add('hidden');
+        fullName.classList.remove('border-red-400');
+      }
+
+      // Validate Email (simple RFC-compliant regex)
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
+        errEmail.classList.remove('hidden');
+        email.classList.add('border-red-400');
+        isValid = false;
+      } else {
+        errEmail.classList.add('hidden');
+        email.classList.remove('border-red-400');
+      }
+
+      if (!isValid) return;
+
+      // Show sending state
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Submitting...';
+
+      setTimeout(() => {
+        // Successful mock submission
+        successBanner.classList.remove('hidden');
+        document.getElementById('contact-form').reset();
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>Send Enquiry</span><i class="fa-solid fa-paper-plane text-xs ml-2"></i>';
+
+        // Auto-scroll slightly to show the confirmation banner
+        successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 700);
+    }
+  </script>
+</body>
+</html>
